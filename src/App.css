@@ -40,3 +40,21 @@
 .read-the-docs {
   color: #888;
 }
+
+.MovieList {
+  display: grid; 
+  grid-template-columns: 1fr 1fr 1fr; 
+  grid-template-rows: 1fr 1fr 1fr; 
+  gap: 0px 0px; 
+}
+
+.MovieList .movie {
+  border: 1px solid #257b8f;
+  border-radius: 10px;
+  color: #fff;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer;
+  overflow: hidden;
+}
