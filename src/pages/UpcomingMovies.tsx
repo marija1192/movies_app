@@ -15,8 +15,6 @@ function UpcomingMovies() {
     }
   };
 
-  console.log(currentPage)
-
   const {
     isFetching,
     error,

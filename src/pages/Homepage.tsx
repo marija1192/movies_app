@@ -1,7 +1,5 @@
 function HomePage() {
-  return (<>
-  {/* TODO */}
-    <div className="overlay"></div> 
+  return (
     <div className="homepage_container">
       <h1>Explore the world of movies</h1>
       <p>
@@ -11,7 +9,7 @@ function HomePage() {
         find it here.
       </p>
     </div>
-    </>
+    
   );
 }
 export default HomePage;

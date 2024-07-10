@@ -33,7 +33,7 @@ export default function MovieDetails({ movie }: MovieProp) {
           <div className={classes.genre_container}>
             <span className={classes.genre_label}>Genres: </span>
             {movie?.genres?.map((genre) => (
-              <span key={genre.id}>{genre.name}</span>
+              <span className={classes.genre_name} key={genre.id}>{genre.name}</span>
             ))}
           </div>
         </div>

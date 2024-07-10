@@ -37,3 +37,14 @@ export async function fetchMovieDetails(movieId: string | undefined) {
   }
   return data;
 }
+
+export async function queryMovie(query: string) {
+  const response = await fetch(
+    `${url}/search/movie?api_key=${apiKey}&query=${query}`
+  );
+  const data = await response.json()
+  if (!response.ok) {
+    throw new Error(`HTTP error! status: ${response.status}`);
+  }
+  return data.results;
+}

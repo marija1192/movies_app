@@ -37,6 +37,16 @@ export default function Navigation() {
               Upcoming
             </NavLink>
           </li>
+          <li>
+            <NavLink
+              to="/search"
+              className={({ isActive }) =>
+                isActive ? classes.active : undefined
+              }
+            >
+              Search Movie
+            </NavLink>
+          </li>
         </ul>
       </nav>
     </header>

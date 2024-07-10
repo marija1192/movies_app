@@ -5,6 +5,7 @@ import RootLayout from "./pages/RootLayout";
 import UpcomingMovies from "./pages/UpcomingMovies";
 import ErrorPage from "./pages/ErrorPage";
 import MoviePage from "./pages/MoviePage";
+import Search from "./components/Search/Search";
 
 const router = createBrowserRouter([
   {
@@ -16,6 +17,7 @@ const router = createBrowserRouter([
       { path: "/popular", element: <PopularMovies /> },
       { path: "/upcoming", element: <UpcomingMovies /> },
       { path: "/movie/:movieId", element: <MoviePage /> },
+      {path: "/search", element: <Search />}
     ],
   },
 ]);
