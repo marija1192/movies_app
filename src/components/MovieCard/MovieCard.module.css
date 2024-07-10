@@ -1,0 +1,41 @@
+.movie_card {
+  border-radius: 8px;
+  background-color: var(--color-gray-700);
+  margin: 1rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.image_container {
+}
+
+.image_container img {
+  width: 100%;
+}
+
+.movie_details {
+}
+
+.movie_title {
+}
+
+.movie_release_date {
+}
+
+.link_details {
+    text-decoration: none;
+    padding: 8px;
+    background-color: var(--color-gray-800);
+    border-radius: 8px;
+    color: white;
+    transition: color 0.3s;
+}
+.link_details:hover{
+    color: var(--color-gray-700);
+}
+
+
+.movie_rating span {
+  font-weight: bold;
+}
