@@ -12,7 +12,6 @@ function UpcomingMovies() {
   const handlePageChange = (page: number) => {
     if (page >= 1 && page <= totalPages) {
       setCurrentPage(page);
-      // Implement logic to fetch data for the new page, e.g., API call
     }
   };
 

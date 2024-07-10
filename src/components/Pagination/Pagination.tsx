@@ -12,21 +12,31 @@ export default function Pagination({
   const startPage = Math.max(1, currentPage - Math.floor(pagesToShow / 2));
   const endPage = Math.min(totalPages, startPage + pagesToShow - 1);
 
-  // Generate an array of page numbers to display
   const pages = Array.from(
     Array(endPage - startPage + 1),
     (_, index) => startPage + index
   );
 
+  const handleClick = (
+    page: number,
+    event: React.MouseEvent<HTMLButtonElement, MouseEvent>
+  ) => {
+    event.preventDefault();
+    onPageChange(page);
+  };
+
   return (
-    <nav aria-label="Page navigation" className={classes.page_pagination_container}>
+    <nav
+      aria-label="Page navigation"
+      className={classes.page_pagination_container}
+    >
       <ul className={classes.page_pagination}>
         {pages.map((page) => (
           <li
             key={page}
-            className={`page-item ${currentPage === page ? "active" : ""}`}
+            className={`${classes.page_item} ${currentPage === page ? classes.active : ""}`}
           >
-            <button className="page-link" onClick={() => onPageChange(page)}>
+            <button className={classes.page_link} onClick={(e) => handleClick(page, e)}>
               {page}
             </button>
           </li>
