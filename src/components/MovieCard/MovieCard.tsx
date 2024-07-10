@@ -3,6 +3,7 @@ import { MovieProp } from "../../interfaces/IMovie";
 import classes from "./MovieCard.module.css";
 
 export default function MovieCard({ movie }: MovieProp) {
+
   return (
     <>
       <div className={classes.movie_card}>
@@ -20,7 +21,7 @@ export default function MovieCard({ movie }: MovieProp) {
           <p className={classes.movie_rating}>
             <span>Rating:</span> {movie?.vote_average}
           </p>
-          <Link className={classes.link} to={`/movie/${movie?.id}`}>View details</Link>
+          <Link className={classes.link_details} to={`/movie/${movie?.id}`}>View details</Link>
         </div>
       </div>
     </>

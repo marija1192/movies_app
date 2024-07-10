@@ -18,12 +18,12 @@ export default function MoviePage() {
   }
 
   return (
-    <div>
+    <>
       {isFetching ? (
         <span>Loading...</span>
       ) : (
         <MovieDetails movie={movieDetails} />
       )}
-    </div>
+    </>
   );
 }

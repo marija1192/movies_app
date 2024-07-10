@@ -2,9 +2,9 @@ import { IData } from "../interfaces/IData";
 const apiKey = import.meta.env.VITE_API_KEY;
 const url = import.meta.env.VITE_API_URL;
 
-export async function fetchPopularMovies() {
+export async function fetchPopularMovies(page: number) {
   const response = await fetch(
-    `${url}/movie/popular?api_key=${apiKey}&language=en-US&page=1`,
+    `${url}/movie/popular?api_key=${apiKey}&language=en-US&page=${page}`,
     { method: "GET" }
   );
   const data: IData = await response.json();
@@ -14,9 +14,9 @@ export async function fetchPopularMovies() {
   return data.results;
 }
 
-export async function fetchUpcomingMovies() {
+export async function fetchUpcomingMovies(page: number) {
   const response = await fetch(
-    `${url}/movie/upcoming?api_key=${apiKey}&language=en-US&page=1`,
+    `${url}/movie/upcoming?api_key=${apiKey}&language=en-US&page=${page}`,
     { method: "GET" }
   );
   const data: IData = await response.json();

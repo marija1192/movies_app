@@ -1,11 +1,9 @@
-import "./App.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import HomePage from "./pages/Homepage";
 import PopularMovies from "./pages/PopularMovies";
 import RootLayout from "./pages/RootLayout";
 import UpcomingMovies from "./pages/UpcomingMovies";
 import ErrorPage from "./pages/ErrorPage";
-// import MovieDetails from "./components/MovieDetails";
 import MoviePage from "./pages/MoviePage";
 
 const router = createBrowserRouter([

@@ -12,7 +12,7 @@ export default function MovieDetails({ movie }: MovieProp) {
     : "";
 
   return (
-    <div>
+    <div className={classes.movie_details_container}>
       <h1>{movie?.title}</h1>
       <div className={classes.container}>
         {videoLink ? (
@@ -30,11 +30,12 @@ export default function MovieDetails({ movie }: MovieProp) {
         <div className={classes.movie_overview}>
           <h5>Plot</h5>
           <p>{movie?.overview}</p>
-          <div className={classes.genre_container}></div>
-          <span className={classes.genre_label}>Genres: </span>
-          {movie?.genres?.map((genre) => (
-            <span key={genre.id}>{genre.name} </span>
-          ))}
+          <div className={classes.genre_container}>
+            <span className={classes.genre_label}>Genres: </span>
+            {movie?.genres?.map((genre) => (
+              <span key={genre.id}>{genre.name}</span>
+            ))}
+          </div>
         </div>
       </div>
     </div>

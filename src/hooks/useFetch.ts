@@ -13,7 +13,7 @@ export function useFetch(fetchFn: any, initialValue: any, param?: any) {
         const data = param !== undefined ? await fetchFn(param) : await fetchFn();
         setFetchedData(data);
       } catch (error: any) {
-        setError({ message: error.message || 'Failed to fetch data.' });
+        setError({ message: error.message, title: 'Failed to fetch data.' });
       }
 
       setIsFetching(false);
