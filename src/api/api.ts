@@ -25,3 +25,15 @@ export async function fetchUpcomingMovies() {
   }
   return data.results;
 }
+
+export async function fetchMovieDetails(movieId: string | undefined) {
+  const response = await fetch(
+    `${url}/movie/${movieId}?api_key=${apiKey}&language=en-US&append_to_response=videos`,
+    { method: "GET" }
+  );
+  const data = await response.json()
+  if (!response.ok) {
+    throw new Error(`HTTP error! status: ${response.status}`);
+  }
+  return data;
+}

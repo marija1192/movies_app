@@ -1,7 +1,8 @@
-import MovieList from "../components/MovieList";
+
 import Error from "../components/Error";
 import { useFetch } from "../hooks/useFetch";
 import { fetchPopularMovies } from "../api/api";
+import MovieList from "../components/MovieList/MovieList";
 
 function PopularMovies() {
   const {
@@ -17,7 +18,6 @@ function PopularMovies() {
   }
   return (
     <>
-      <h1 className="movie-list">Popular</h1>
       {isFetching ? (
         <span>Loading...</span>
       ) : (

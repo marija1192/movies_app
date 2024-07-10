@@ -1,0 +1,31 @@
+.movie_card {
+  border-radius: 8px;
+  background-color: var(--color-gray-700);
+  margin: 1rem;
+  padding: 1rem;
+}
+
+.image_container {
+
+}
+
+.image_container img {
+    width: 100%;
+}
+
+.movie_details {
+}
+
+.movie_title {
+}
+
+.movie_release_date {
+}
+
+.link {
+    
+}
+
+.movie_rating span {
+  font-weight: bold;
+}

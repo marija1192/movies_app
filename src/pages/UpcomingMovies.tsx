@@ -1,4 +1,4 @@
-import MovieList from "../components/MovieList";
+import MovieList from "../components/MovieList/MovieList";
 import Error from "../components/Error";
 import { useFetch } from "../hooks/useFetch";
 import { fetchUpcomingMovies } from "../api/api";
@@ -17,7 +17,6 @@ function UpcomingMovies() {
   }
   return (
     <>
-      <h1 className="movie-list">Upcoming</h1>
       {isFetching ? (
         <span>Loading...</span>
       ) : (

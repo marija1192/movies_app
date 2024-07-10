@@ -1,0 +1,12 @@
+  .movie_list {
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Ovde postavite minimalnu i maksimalnu širinu kolone */
+    gap: 20px; 
+    width: 100%;
+  }
+  
+  @media (max-width: 768px) {
+    .movie_list {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Promenite širinu kolona za manje ekrane po potrebi */
+    }
+  }
