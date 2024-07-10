@@ -29,12 +29,12 @@ export default function Navigation() {
           </li>
           <li>
             <NavLink
-              to="/upcoming"
+              to="/top-rated"
               className={({ isActive }) =>
                 isActive ? classes.active : undefined
               }
             >
-              Upcoming
+              Top rated
             </NavLink>
           </li>
           <li>

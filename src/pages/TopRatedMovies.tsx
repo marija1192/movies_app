@@ -1,11 +1,11 @@
 import MovieList from "../components/MovieList/MovieList";
 import Error from "../components/Error";
 import { useFetch } from "../hooks/useFetch";
-import { fetchUpcomingMovies } from "../api/api";
+import { fetchTopRatedMovies } from "../api/api";
 import { useState } from "react";
 import Pagination from "../components/Pagination/Pagination";
 
-function UpcomingMovies() {
+function TopRatedMovies() {
   const [currentPage, setCurrentPage] = useState(1);
   const totalPages = 10; // for example
 
@@ -18,8 +18,8 @@ function UpcomingMovies() {
   const {
     isFetching,
     error,
-    fetchedData: upcomingMovies,
-  } = useFetch(fetchUpcomingMovies, [], currentPage);
+    fetchedData: topRatedMovies,
+  } = useFetch(fetchTopRatedMovies, [], currentPage);
 
   if (error) {
     return (
@@ -32,10 +32,10 @@ function UpcomingMovies() {
       {isFetching ? (
         <span>Loading...</span>
       ) : (
-        <MovieList movies={upcomingMovies} />
+        <MovieList movies={topRatedMovies} />
       )}
       <Pagination currentPage={currentPage} totalPages={totalPages} onPageChange={handlePageChange} />
     </>
   );
 }
-export default UpcomingMovies;
+export default TopRatedMovies;
