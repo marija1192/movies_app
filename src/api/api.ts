@@ -14,15 +14,16 @@ export async function fetchPopularMovies(page: number) {
   return data.results;
 }
 
-export async function fetchUpcomingMovies(page: number) {
+export async function fetchTopRatedMovies(page: number) {
   const response = await fetch(
-    `${url}/movie/upcoming?api_key=${apiKey}&language=en-US&page=${page}`,
+    `${url}/movie/top_rated?api_key=${apiKey}&language=en-US&page=${page}`,
     { method: "GET" }
   );
   const data: IData = await response.json();
   if (!response.ok) {
     throw new Error(`HTTP error! status: ${response.status}`);
   }
+
   return data.results;
 }
 
